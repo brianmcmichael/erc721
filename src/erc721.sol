@@ -25,7 +25,7 @@ contract ERC721 is ERC721Events {
     function ownerOf(uint256 nft) public view returns (address);
     function approve(address guy, uint256 nft) public payable returns (address);
     function setApprovalForAll(address op, bool ok) public;
-    function getApproval(uint256 nft) public returns (address);
+    function getApproved(uint256 nft) public returns (address);
     function isApprovedForAll(address guy, address op) public view returns (bool);
     function takeOwnership(uint256 nft) public;
     function safeTransferFrom(address src, address dst, uint256 nft, bytes what) public payable;
