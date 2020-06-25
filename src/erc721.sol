@@ -8,12 +8,6 @@
 
 pragma solidity >0.4.20;
 
-contract ERC721Events {
-    event Transfer(address indexed src, address indexed dst, uint256 nft);
-    event Approval(address indexed src, address indexed guy, uint256 nft);
-    event ApprovalForAll(address indexed guy, address indexed op, bool ok);
-}
-
 contract ERC721Metadata {
     function name() public view returns (string);
     function symbol() public view returns (string);
@@ -26,6 +20,12 @@ contract ERC721Enumerable {
     function tokenOfOwnerByIndex(address guy, uint256 idx) public view returns (uint256);
 }
 
+contract ERC721Events {
+    event Transfer(address indexed src, address indexed dst, uint256 nft);
+    event Approval(address indexed src, address indexed guy, uint256 nft);
+    event ApprovalForAll(address indexed guy, address indexed op, bool ok);
+}
+
 contract ERC721TokenReceiver {
     function onERC721Received(address op, address src, uint256 nft, bytes what) external returns(bytes4);
 }
@@ -34,7 +34,7 @@ contract ERC165 {
     function supportsInterface(bytes4 interfaceID) external view returns (bool);
 }
 
-contract ERC721 is ERC721Events, ERC721Metadata, ERC721Enumerable, ERC721TokenReceiver, ERC165 {
+contract ERC721 is ERC165, ERC721Events, ERC721TokenReceiver {
     function balanceOf(address guy) public view returns (uint256);
     function ownerOf(uint256 nft) public view returns (address);
     function safeTransferFrom(address src, address dst, uint256 nft, bytes what) public payable;
