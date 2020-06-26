@@ -37,7 +37,7 @@ contract ERC165 {
 contract ERC721 is ERC165, ERC721Events, ERC721TokenReceiver {
     function balanceOf(address guy) public view returns (uint256);
     function ownerOf(uint256 nft) public view returns (address);
-    function safeTransferFrom(address src, address dst, uint256 nft, bytes calldata what) public payable;
+    function safeTransferFrom(address src, address dst, uint256 nft, bytes memory what) public payable;
     function safeTransferFrom(address src, address dst, uint256 nft) public payable;
     function transferFrom(address src, address dst, uint256 nft) public payable;
     function approve(address guy, uint256 nft) public payable returns (address);
