@@ -9,9 +9,9 @@
 pragma solidity >0.4.20;
 
 contract ERC721Metadata {
-    function name() public view returns (string);
-    function symbol() public view returns (string);
-    function tokenURI(uint256 nft) external view returns (string);
+    function name() public view returns (string memory);
+    function symbol() public view returns (string memory);
+    function tokenURI(uint256 nft) external view returns (string memory);
 }
 
 contract ERC721Enumerable {
