@@ -40,7 +40,7 @@ interface ERC721 is ERC165, ERC721Events, ERC721TokenReceiver {
     function safeTransferFrom(address src, address dst, uint256 nft, bytes calldata what) external payable;
     function safeTransferFrom(address src, address dst, uint256 nft) external payable;
     function transferFrom(address src, address dst, uint256 nft) external payable;
-    function approve(address guy, uint256 nft) external payable returns (address);
+    function approve(address guy, uint256 nft) external payable;
     function setApprovalForAll(address op, bool ok) external;
     function getApproved(uint256 nft) external returns (address);
     function isApprovedForAll(address guy, address op) external view returns (bool);
