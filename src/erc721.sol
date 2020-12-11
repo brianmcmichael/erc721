@@ -34,7 +34,7 @@ interface ERC165 {
     function supportsInterface(bytes4 interfaceID) external view returns (bool);
 }
 
-interface ERC721 is ERC165, ERC721Events, ERC721TokenReceiver {
+interface ERC721 is ERC165, ERC721Events {
     function balanceOf(address guy) external view returns (uint256);
     function ownerOf(uint256 nft) external view returns (address);
     function safeTransferFrom(address src, address dst, uint256 nft, bytes calldata what) external payable;
