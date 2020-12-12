@@ -6,6 +6,7 @@
 // required for copyright to apply.  As a result, this is free and
 // unencumbered software belonging to the public domain.
 
+// SPDX-License-Identifier: NLPL
 pragma solidity >=0.6.0;
 
 interface ERC721Metadata {
